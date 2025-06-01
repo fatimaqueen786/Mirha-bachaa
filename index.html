@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MIRHA, TUM MERI ZINDAGI HO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Satisfy&family=Lobster&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      color: white;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.5em;
+      margin-top: 60px;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b, #1e90ff, #00c9ff, #a18cd1);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 6s ease infinite;
+      text-transform: none;
+    }
+
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .heart {
+      font-size: 80px;
+      color: red;
+      animation: beat 1s infinite;
+      margin: 20px 0;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    p {
+      font-family: 'Satisfy', cursive;
+      font-size: 1.3em;
+      margin: 20px auto;
+      width: 85%;
+      line-height: 1.7;
+      text-shadow: 1px 1px 4px #000;
+      background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 5s linear infinite;
+    }
+
+    .photo {
+      border-radius: 20px;
+      width: 240px;
+      height: auto;
+      border: 5px solid white;
+      box-shadow: 0 0 25px rgba(255,255,255,0.6);
+      margin-top: 25px;
+    }
+
+    .love-message {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.3em;
+      margin-top: 30px;
+      font-weight: bold;
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 4s ease-in-out infinite;
+    }
+
+    .footer {
+      font-family: 'Lobster', cursive;
+      margin-top: 40px;
+      font-size: 1.5em;
+      text-shadow: 1px 1px 3px black;
+      color: #fff;
+    }
+
+    .music-btn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1em;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      border: none;
+      border-radius: 30px;
+      color: #003366;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .music-btn:hover {
+      background: linear-gradient(to right, #ACB6E5, #74ebd5);
+      transform: scale(1.05);
+    }
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MIRHA, TUM MERI ZINDAGI HO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Satisfy&family=Lobster&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      color: white;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.5em;
+      margin-top: 60px;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b, #1e90ff, #00c9ff, #a18cd1);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 6s ease infinite;
+      text-transform: none;
+    }
+
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .heart {
+      font-size: 80px;
+      color: red;
+      animation: beat 1s infinite;
+      margin: 20px 0;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    p {
+      font-family: 'Satisfy', cursive;
+      font-size: 1.3em;
+      margin: 20px auto;
+      width: 85%;
+      line-height: 1.7;
+      text-shadow: 1px 1px 4px #000;
+      background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 5s linear infinite;
+    }
+
+    .photo {
+      border-radius: 20px;
+      width: 240px;
+      height: auto;
+      border: 5px solid white;
+      box-shadow: 0 0 25px rgba(255,255,255,0.6);
+      margin-top: 25px;
+    }
+
+    .love-message {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.3em;
+      margin-top: 30px;
+      font-weight: bold;
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 4s ease-in-out infinite;
+    }
+
+    .footer {
+      font-family: 'Lobster', cursive;
+      margin-top: 40px;
+      font-size: 1.5em;
+      text-shadow: 1px 1px 3px black;
+      color: #fff;
+    }
+
+    .music-btn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1em;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      border: none;
+      border-radius: 30px;
+      color: #003366;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .music-btn:hover {
+      background: linear-gradient(to right, #ACB6E5, #74ebd5);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="rainCanvas"></canvas>
+  <h1>MIRHA, MUJHE TUMSE KUCH KEHNA HAI...</h1>
+  <div class="heart">❤️</div>
+  <p>
+    TUM MERI ZINDAGI KI SABSE KHOOBSURAT HISSA HO.<br>
+    HAR PAL TUMHARA SAATH CHAHUNGA MAIN... HAMESHA 💖<br><br>
+    MAIN TUMSE BEPANAH MOHABBAT KARTA HOON MIRHA! 😻🌎<br><br>
+    KYA TUM MERI ZINDAGI BANOGI? 💍
+  </p>
+  <img src="https://github.com/fatimaqueen786/Mirha-bachaa/raw/main/IMG-20250601-WA0121.jpg" alt="Mirha" class="photo">
+  <div class="love-message">I ❤️ YOU MIRHA</div>
+  <button class="music-btn" onclick="playMusic()">🎵 PLAY MUSIC</button>
+  <audio id="bgMusic" loop>
+    <source src="https://github.com/fatimaqueen786/Mirha-bachaa/raw/refs/heads/main/%F0%93%86%A9%F0%9D%99%83%F0%9D%99%96%F0%9D%99%A2%F0%9D%99%AF%F0%9D%99%96%F0%93%86%AA%20%F0%9F%A7%B8_7494688804062776606.mp3" type="audio/mpeg">
+    Tumhara browser music play nahi kar raha.
+  </audio>
+  <div class="footer">
+    TUMHARA HAMESHA WALA,<br><strong>SAHIL</strong>
+  </div>
+  <script>
+    const canvas = document.getElementById('rainCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const drops = [];
+    const dropCount = 1000;
+
+    for (let i = 0; i < dropCount; i++) {
+      drops.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        length: Math.random() * 15 + 10,
+        speed: Math.random() * 7 + 4
+      });
+    }
+
+    function drawRain() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+      ctx.lineWidth = 1;
+      ctx.lineCap = 'round';
+
+      for (let i = 0; i < drops.length; i++) {
+        const d = drops[i];
+        ctx.beginPath();
+        ctx.moveTo(d.x, d.y);
+        ctx.lineTo(d.x, d.y + d.length);
+        ctx.stroke();
+
+        d.y += d.speed;
+        if (d.y > canvas.height) {
+          d.y = -20;
+          d.x = Math.random() * canvas.width;
+        }
+      }
+
+      requestAnimationFrame(drawRain);
+    }
+
+    drawRain();
+
+    function playMusic() {
+      const music = document.getElementById('bgMusic');
+      music.play().catch(e => {
+        alert("Browser ne rok diya hai — please dubara click karo.");
+      });
+    }
+  </script>
+</body>
+</html>￼Enter  </style>
+</head>
+<body>
+  <canvas id="rainCanvas"></canvas>
+  <h1>MIRHA, MUJHE TUMSE KUCH KEHNA HAI...</h1>
+  <div class="heart">❤️</div>
+  <p>
+    TUM MERI ZINDAGI KI SABSE KHOOBSURAT HISSA HO.<br>
+    HAR PAL TUMHARA SAATH CHAHUNGA MAIN... HAMESHA 💖<br><br>
+    MAIN TUMSE BEPANAH MOHABBAT KARTA HOON MIRHA! 😻🌎<br><br>
+    KYA TUM MERI ZINDAGI BANOGI? 💍
+  </p>
+  <img src="https://github.com/fatimaqueen786/Mirha-bachaa/raw/main/IMG-20250601-WA0121.jpg" alt="Mirha" class="photo">
+  <div class="love-message">I ❤️ YOU MIRHA</div>
+  <button class="music-btn" onclick="playMusic()">🎵 PLAY MUSIC</button>
+  <audio id="bgMusic" loop>
+    <source src="https://github.com/fatimaqueen786/Mirha-bachaa/raw/refs/heads/main/%F0%93%86%A9%F0%9D%99%83%F0%9D%99%96%F0%9D%99%A2%F0%9D%99%AF%F0%9D%99%96%F0%93%86%AA%20%F0%9F%A7%B8_7494688804062776606.mp3" type="audio/mpeg">
+    Tumhara browser music play nahi kar raha.
+  </audio>
+  <div class="footer">
+    TUMHARA HAMESHA WALA,<br><strong>SAHIL</strong>
+  </div>
+  <script>
+    const canvas = document.getElementById('rainCanvas');
+    const ctx = canvas.getContext('2d');
+
+nction resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const drops = [];
+    const dropCount = 1000;
+
+    for (let i = 0; i < dropCount; i++) {
+      drops.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        length: Math.random() * 15 + 10,
+        speed: Math.random() * 7 + 4
+      });
+    }
+
+    function drawRain() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+      ctx.lineWidth = 1;
+      ctx.lineCap = 'round';
+
+      for (let i = 0; i < drops.length; i++) {
